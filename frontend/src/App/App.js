@@ -7,24 +7,8 @@ import Box from "@mui/material/Box";
 import {styled} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import CheckPatient from "../Pages/CheckPatient";
+import * as service from "../Services/Patient"
 
-const list = [
-    {
-        name:'mannan',
-    },
-    {
-        name:'hannan'
-    },
-    {
-        name:'rao',
-    },
-    {
-        name:'khizer',
-    },
-    {
-      name:'saad',
-    }
-]
 function App() {
 
     const DrawerHeader = styled('div')(({ theme }) => ({
@@ -43,7 +27,7 @@ function App() {
           <AppBarWithDrawer />
           <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
               <DrawerHeader />
-              <CheckPatient patients={list}/>
+              <CheckPatient patients={service.patients}/>
           </Box>
       </Box>
   );

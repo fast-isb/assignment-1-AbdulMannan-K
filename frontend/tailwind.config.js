@@ -3,7 +3,11 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   important: '#root',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'arial':['"Arial"','sans-serif']
+      }
+    },
   },
   plugins: [],
   corePlugins: {
