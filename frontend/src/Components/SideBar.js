@@ -9,7 +9,7 @@ const SideBar = (props) => {
                 <ul className="space-y-2" style={{listStyle:"none",paddingLeft:"0px"}}>
                     {list.map((patient)=>{
                         return <li>
-                            <a href="#" style={{textDecoration:"none"}}
+                            <a name={patient.name} href="#" onClick={props.onClick} style={{textDecoration:"none"}}
                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <PersonIcon />
                                 <span className="ml-3">{patient.name}</span>

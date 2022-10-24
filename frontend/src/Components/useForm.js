@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { makeStyles } from "@material-ui/core";
+// import { makeStyles } from "@mui/material";
 
 
 export function useForm(initialValues, validateOnChange = false, validate) {
@@ -18,38 +18,31 @@ export function useForm(initialValues, validateOnChange = false, validate) {
             validate({ [name]: value })
     }
 
-    const resetForm = () => {
-        setValues(initialValues);
-        setErrors({})
-    }
-
-
     return {
         values,
         setValues,
         errors,
         setErrors,
         handleInputChange,
-        resetForm
     }
 }
 
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        '& .MuiFormControl-root': {
-            width: '80%',
-            margin: theme.spacing(1)
-        }
-    }
-}))
+// const useStyles = makeStyles(theme => ({
+//     root: {
+//         '& .MuiFormControl-root': {
+//             width: '80%',
+//             margin: theme.spacing(1)
+//         }
+//     }
+// }))
 
 export function Form(props) {
 
-    const classes = useStyles();
+    // const classes = useStyles();
     const { children, ...other } = props;
     return (
-        <form className={classes.root} autoComplete="off" {...other}>
+        <form autoComplete="off" {...other}>
             {props.children}
         </form>
     )

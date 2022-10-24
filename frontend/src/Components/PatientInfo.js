@@ -1,12 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import image from '../img.jpg';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import {Button} from "@mui/material";
+import Popup from "./Popup";
+import PrescriptionForm from "../Pages/PrescriptionForm";
+import * as service from "../Services/Patient"
+import UseTable from "./useTable";
+import ActionButton from "./controls/ActionButton";
+import DeleteIcon from "@mui/icons-material/Delete";
 
-
+const header = [
+    'Medicine',
+    'Duration',
+    'Quantity',
+    'Date',
+    'Actions'
+]
 function PatientInfo(props) {
 
     const {patient} = props;
+    const [open,setOpen] = useState(false);
+    const [prescriptions,setPrescriptions] = useState(patient.prescriptions);
+    const openPrescription = ()=>{
+        setOpen(true);
+    }
+    const addPrescription = (prescription)=>{
+        service.addPrescription(patient,prescription);
+        setPrescriptions(patient.prescriptions);
+        setOpen(false);
+    }
+
+    const removePrescription = (prescription)=>{
+        service.removePrescription(patient,prescription);
+        setPrescriptions(patient.prescriptions);
+    }
 
     return (
         <div className="container grid grid-cols-3 ">
@@ -67,31 +94,37 @@ function PatientInfo(props) {
                 <div className="flex" >
                     <div className="container mx-auto px-4 py-2">
                         <div
-                            className="w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                            <div className="flex flex-col items-center py-6">
+                            className="w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 ">
+                            <div className="flex row items-center py-2 px-3">
                                 <img src="https://img.icons8.com/fluency/96/1A1A1A/heart-with-pulse.png"/>
-                                <h4 className="mb-1 text-xl text-gray-900 dark:text-white">Heart Rate</h4>
-                                <h2 className="text-sm text-gray-900 dark:text-white"><h2 className="text-gray-900 dark:text-white" style={{fontSize:"30px",display:"inline"}}>{patient.age}</h2> bpm</h2>
+                                <div className="m-5">
+                                    <h4 className="mb-1 text-xl text-gray-900 dark:text-white">Heart Rate</h4>
+                                    <h2 className="text-sm text-gray-900 dark:text-white"><h2 className="text-gray-900 dark:text-white" style={{fontSize:"30px",display:"inline"}}>{patient.heartRate}</h2> bpm</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="container mx-auto px-4 py-2">
                         <div
                             className="w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                            <div className="flex flex-col items-center py-6">
+                            <div className="flex row items-center py-2 px-3">
                                 <img src="https://img.icons8.com/color/96/000000/hot.png"/>
-                                <h4 className="mb-1 text-xl text-gray-900 dark:text-white">Body Temperature</h4>
-                                <h2 className="text-sm text-gray-900 dark:text-white"><h2 className="text-gray-900 dark:text-white" style={{fontSize:"30px",display:"inline"}}>{patient.age}</h2> C</h2>
+                                <div className="m-5">
+                                    <h4 className="mb-1 text-xl text-gray-900 dark:text-white"> Temperature</h4>
+                                    <h2 className="text-sm text-gray-900 dark:text-white"><h2 className="text-gray-900 dark:text-white" style={{fontSize:"30px",display:"inline"}}>{patient.temperature}</h2> C</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="container mx-auto px-4 py-2">
                         <div
                             className="w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                            <div className="flex flex-col items-center py-6">
+                            <div className="flex row items-center py-2 px-3">
                                 <img src="https://img.icons8.com/fluency-systems-regular/96/000000/sugar-cubes.png"/>
-                                <h4 className="mb-1 text-xl text-gray-900 dark:text-white">Glucose</h4>
-                                <h2 className="text-sm text-gray-900 dark:text-white"><h2 className="text-gray-900 dark:text-white" style={{fontSize:"30px",display:"inline"}}>{patient.age}</h2> mg/dl</h2>
+                                <div className="m-5">
+                                    <h4 className="mb-1 text-xl text-gray-900 dark:text-white">Glucose</h4>
+                                    <h2 className="text-sm text-gray-900 dark:text-white"><h2 className="text-gray-900 dark:text-white" style={{fontSize:"30px",display:"inline"}}>{patient.glucose}</h2> mg/dl</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -121,11 +154,44 @@ function PatientInfo(props) {
                         <div className="w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                             <div className="flex flex-col px-5 pb-10 py-5">
                                 <h2 className="mb-5 font-medium font-bold text-gray-900 dark:text-white">Prescription </h2>
-                                <Button className="p-3" variant="outlined">Add a prescription</Button>
+                                <Button className="p-3" variant="outlined" onClick={openPrescription}>Add a prescription</Button>
+                                <div className=" h-60  overflow-y-scroll">
+                                    {/*    // return <div>{prescription.medicine}</div>*/}
+                                    <UseTable header={header} >
+                                        {prescriptions.map((prescription)=> {
+                                            return  <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    {prescription.medicine}
+                                                </th>
+                                                <td className="py-4 px-6">
+                                                    {prescription.duration}
+                                                </td>
+                                                <td className="py-4 px-6">
+                                                    {prescription.quantity}
+                                                </td>
+                                                <td className="py-4 px-6">
+                                                    {prescription.date}
+                                                </td>
+                                                <td className="py-4 px-6 text-right">
+                                                    <ActionButton
+                                                        color="red"
+                                                        onClick={()=> {removePrescription(prescription)}}
+                                                    >
+                                                        <DeleteIcon fontSize="small"/>
+                                                    </ActionButton>
+                                                </td>
+                                            </tr>
+                                        })}
+                                    </UseTable>
+                                    {/*})}*/}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <Popup title="Prescription Form" openPopup={open} setOpenPopup={setOpen}>
+                    <PrescriptionForm onSubmit={addPrescription}/>
+                </Popup>
             </div>
         </div>
 
