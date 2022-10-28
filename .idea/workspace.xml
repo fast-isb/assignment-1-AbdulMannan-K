@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc8b8e7f-37b0-498e-94cb-1b58572a048f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/prescription.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/prescription.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/patients.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/patients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/PatientInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/PatientInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Pages/CheckPatient.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/CheckPatient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Pages/PrescriptionForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/PrescriptionForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Services/Patient.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Services/Patient.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -47,6 +47,7 @@ router.post('/:patientId/add',async (req,res) => {
     //     }
     // );
     // newPatient.save().then(()=>console.log('new patient added')).catch(err=>console.log(err));
+    //checking commentcd
     let addedPrescription;
     await patient.findById(req.params.patientId)
         .then(async patient => {
