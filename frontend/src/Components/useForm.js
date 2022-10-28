@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import { makeStyles } from "@mui/material";
 
 
 export function useForm(initialValues, validateOnChange = false, validate) {
@@ -27,19 +26,8 @@ export function useForm(initialValues, validateOnChange = false, validate) {
     }
 }
 
-
-// const useStyles = makeStyles(theme => ({
-//     root: {
-//         '& .MuiFormControl-root': {
-//             width: '80%',
-//             margin: theme.spacing(1)
-//         }
-//     }
-// }))
-
 export function Form(props) {
 
-    // const classes = useStyles();
     const { children, ...other } = props;
     return (
         <form autoComplete="off" {...other}>

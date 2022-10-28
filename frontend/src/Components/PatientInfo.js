@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import image from '../img.jpg';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import {Button} from "@mui/material";
@@ -20,12 +20,12 @@ function PatientInfo(props) {
 
     const {patient} = props;
     const [open,setOpen] = useState(false);
-    const [prescriptions,setPrescriptions] = useState(patient.prescriptions);
+    const [prescriptions,setPrescriptions] = useState([]);
     const openPrescription = ()=>{
         setOpen(true);
     }
     const addPrescription = (prescription)=>{
-        service.addPrescription(patient,prescription);
+        service.addPrescription(patient, prescription).then(r => console.log("success")).catch(err=>console.log("error : "+err));
         setPrescriptions(patient.prescriptions);
         setOpen(false);
     }
@@ -34,6 +34,10 @@ function PatientInfo(props) {
         service.removePrescription(patient,prescription);
         setPrescriptions(patient.prescriptions);
     }
+
+    useEffect(()=>{
+        setPrescriptions(patient.prescriptions);
+    },[patient])
 
     return (
         <div className="container grid grid-cols-3 ">
@@ -53,7 +57,7 @@ function PatientInfo(props) {
                     <div
                         className="w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                         <div className="flex flex-col px-5 pb-10 py-5">
-                            <h2 className="mb-1 font-medium font-bold text-gray-900 dark:text-white">Information : </h2>
+                            <h2 className="mb-1 h-20 font-medium font-bold text-gray-900 dark:text-white">Information : </h2>
                             <span className="py-2">
                         <h3 className="font-bold inline" >Gender:  </h3>
                         <h4 className=" text-gray-500 dark:text-gray-400 inline">{patient.gender}</h4>
@@ -159,7 +163,7 @@ function PatientInfo(props) {
                                     {/*    // return <div>{prescription.medicine}</div>*/}
                                     <UseTable header={header} >
                                         {prescriptions.map((prescription)=> {
-                                            return  <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                            return  <tr key={prescription.medicine} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                                 <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                     {prescription.medicine}
                                                 </th>

@@ -7,6 +7,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import { Link as RouterLink, MemoryRouter } from 'react-router-dom';
 import {styled, useTheme} from "@mui/material/styles";
 import React from 'react';
 import MuiDrawer from "@mui/material/Drawer";
@@ -78,6 +79,8 @@ export default function MiniDrawer(props){
                 {list.map((item, index) => (
                     <ListItem key={item.text} disablePadding sx={{ display: 'block' }}>
                         <ListItemButton
+                            component={RouterLink}
+                            to={item.route}
                             sx={{
                                 minHeight: 48,
                                 justifyContent: open ? 'initial' : 'center',

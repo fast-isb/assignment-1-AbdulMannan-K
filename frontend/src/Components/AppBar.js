@@ -34,17 +34,17 @@ const list = [
     {
         text:'Check Patient',
         icon:<VaccinesIcon/>,
-        onClick:()=>{
-
-        }
+        route:'/patients',
     },
     {
         text:'Make Schedule',
-        icon:<CalendarMonthIcon/>
+        icon:<CalendarMonthIcon/>,
+        route:'/schedule',
     },
     {
         text:'Check Appointments',
-        icon:<MoreTimeIcon/>
+        icon:<MoreTimeIcon/>,
+        route:'/appointments',
     },
 ]
 

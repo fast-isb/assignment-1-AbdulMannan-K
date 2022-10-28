@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc8b8e7f-37b0-498e-94cb-1b58572a048f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/AppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/AppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/PatientInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/PatientInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/useForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/useForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/useTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/useTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Pages/CheckPatient.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/CheckPatient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Services/Patient.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Services/Patient.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GOWY8YyKZSRtdkQOl06Z1X8mNP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/abdul/Documents/WebstormProjects/assignment-1-AbdulMannan-K/frontend/src/Pages&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/Pages" />
+      <recent name="$PROJECT_DIR$/frontend/src/Components" />
+      <recent name="$PROJECT_DIR$/frontend/src/Components/controls" />
+      <recent name="$PROJECT_DIR$/frontend/src" />
+      <recent name="$PROJECT_DIR$/frontend" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="ReactNative" />
+      </set>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc8b8e7f-37b0-498e-94cb-1b58572a048f" name="Changes" comment="" />
+      <created>1666260155957</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666260155957</updated>
+      <workItem from="1666260157051" duration="1294000" />
+      <workItem from="1666261857054" duration="782000" />
+      <workItem from="1666262689797" duration="38243000" />
+      <workItem from="1666611989536" duration="4000" />
+      <workItem from="1666647838769" duration="10043000" />
+      <workItem from="1666692749769" duration="5448000" />
+      <workItem from="1666740304805" duration="25531000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
