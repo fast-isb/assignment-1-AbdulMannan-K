@@ -45,14 +45,14 @@ function PrescriptionForm(props) {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
-                <Select
-                    name="medicineId"
-                    label="Medicine"
-                    options={service.medicineOptions}
-                    value={values.medicineId}
-                    onChange={handleInputChange}
-                    error={errors.medicineId}/>
+        <Form onSubmit={handleSubmit} style={{display:'grid', gap:30, margin:'30px'}}>
+                    <Select
+                        name="medicineId"
+                        label="Medicine"
+                        options={service.medicineOptions}
+                        value={values.medicineId}
+                        onChange={handleInputChange}
+                        error={errors.medicineId}/>
                 <Input
                     name="quantity"
                     label="Quantity"

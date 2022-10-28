@@ -1,151 +1,6 @@
 import axios from "axios";
 
-export let patients = [
-
-    {
-        id:'635aed461ececd1967a4e814',
-        name:'abdul',
-        gender:'male',
-        age:20,
-        bloodType:'A+',
-        heartRate:30,
-        temperature:90,
-        glucose:30,
-        allergies:['Milk','Penicilin',],
-        diseases:['Diabetes','Heart',],
-        tests:[
-            {
-                name:'CT Scan -Full Body',
-                date:'12th Feburary 2020'
-            },
-            {
-                name:'Creatine Kinase T',
-                date:'12th March 2020'
-            },
-            {
-                name:'Eye',
-                date:'14th April 2021'
-            }
-        ],
-        prescriptions:[
-
-            {
-                id:1,
-                medicine:'Penadol',
-                medicineId:'1',
-                quantity:23,
-                duration:234,
-                date:new Date().toLocaleDateString()
-                ,
-            },
-            {
-                id:2,
-                medicine:'aklsf',
-                medicineId:'2',
-                quantity:23,
-                duration:234,
-                date:Date.now(),
-            }
-        ],
-        height:1.78,
-        weight:65,
-    },
-    {
-        id:12312432,
-        name:'mannan',
-        gender:'male',
-        age:20,
-        bloodType:'A+',
-        heartRate:30,
-        temperature:90,
-        glucose:30,
-        allergies:['Milk','Penicilin',],
-        diseases:['Diabetes','Heart',],
-        tests:[
-            {
-                name:'CT Scan -Full Body',
-                date:'12th Feburary 2020'
-            },
-            {
-                name:'Creatine Kinase T',
-                date:'12th March 2020'
-            },
-            {
-                name:'Hello World',
-                date:'14th April 2021'
-            }
-        ],
-        prescriptions:[
-
-            {
-                id:1,
-                medicine:'Something',
-                medicineId:'1',
-                quantity:23,
-                duration:234,
-                date:Date.now(),
-            },
-            {
-                id:2,
-                medicine:'nothingS',
-                medicineId:'2',
-                quantity:23,
-                duration:234,
-                date:Date.now(),
-            }
-        ],
-        height:1.78,
-        weight:65,
-    },
-    {
-        id:1231243221312,
-        name:'kklas',
-        gender:'male',
-        age:20,
-        bloodType:'A+',
-        heartRate:30,
-        temperature:90,
-        glucose:30,
-        allergies:['Milk','Penicilin',],
-        diseases:['Diabetes','Heart',],
-        tests:[
-            {
-                name:'CT Scan -Full Body',
-                date:'12th Feburary 2020'
-            },
-            {
-                name:'Creatine Kinase T',
-                date:'12th March 2020'
-            },
-            {
-                name:'Hello World',
-                date:'14th April 2021'
-            }
-        ],
-        prescriptions:[
-
-            {
-                id:1,
-                medicine:'Something',
-                medicineId:'1',
-                quantity:23,
-                duration:234,
-                date:Date.now(),
-            },
-            {
-                id:2,
-                medicine:'nothingS',
-                medicineId:'2',
-                quantity:23,
-                duration:234,
-                date:Date.now(),
-            }
-        ],
-        height:1.78,
-        weight:65,
-    }
-
-]
+export let patients = []
 
 export const medicineOptions=[
     {
@@ -164,17 +19,40 @@ export const medicineOptions=[
 
 export async function addPrescription(patient, prescription) {
     prescription.medicine = medicineOptions[prescription.medicineId - 1].title;
-    patient.prescriptions.push(prescription);
-    await axios.post('http://localhost:3001/patients/'+patient.id+'/add',{
+    // patient.prescriptions.push(prescription);
+    await axios.post('http://localhost:3001/patients/'+patient._id+'/add',{
         prescription
-    }).then(()=>console.log())
+    }).then(async (res) => {
+        let newPrescription = await res.data;
+        console.log('res data '+newPrescription.quantity)
+        await getMedicine(newPrescription);
+        patient.prescriptions.push(newPrescription);
+    })
+    console.log('check 1 '+patient.prescriptions)
+}
+
+export async function getMedicine(prescription){
+    let medicine;
+    medicine=await (await axios.get('http://localhost:3001/patients/medicines/' + prescription.medicine)).data
+    prescription.medicine=medicine;
+    console.log('medicine : '+medicine)
+}
+export async function getPrescriptions(patient){
+    for(let i=0 ;i < patient.prescriptions.length ; i++){
+        let pres;
+        pres=await (await axios.get('http://localhost:3001/patients/' + patient.prescriptions[i]._id)).data
+        console.log('pres'+pres);
+        await getMedicine(pres);
+        patient.prescriptions[i]=(pres);
+    }
+    console.log('prescriptions: ' +patient.prescriptions);
 }
 
 export async function removePrescription(patient, prescription) {
-    await axios.post('http://localhost:3001/patients/' + patient.id + '/remove', {
+    patient.prescriptions = patient.prescriptions.filter(e => e !== prescription)
+    await axios.post('http://localhost:3001/patients/' + patient._id + '/remove', {
         prescription
     })
-    patient.prescriptions = patient.prescriptions.filter(e => e !== prescription)
 }
 
 // export async function getAllPatients(){
@@ -187,6 +65,9 @@ export async function updatePatients(){
     // patients.push(patient[0]);
     patients=patient;
     console.log('frontend : '+patient.map((p)=>p.name));
+
+    await getPrescriptions(patients[0]);
+
     return patients;
 }
 export function getUpdatedPatient(patient){

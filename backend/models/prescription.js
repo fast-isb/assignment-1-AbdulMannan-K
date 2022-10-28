@@ -17,7 +17,7 @@ const prescriptionSchema = new schema(
             required:true,
         },
         date: {
-            type:Date,
+            type:String,
             required:true,
         }
     }

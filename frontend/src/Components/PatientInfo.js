@@ -24,14 +24,15 @@ function PatientInfo(props) {
     const openPrescription = ()=>{
         setOpen(true);
     }
-    const addPrescription = (prescription)=>{
-        service.addPrescription(patient, prescription).then(r => console.log("success")).catch(err=>console.log("error : "+err));
+    const addPrescription = async (prescription) => {
+        await service.addPrescription(patient, prescription).then(r => console.log("success")).catch(err => console.log("error : " + err));
+        console.log("check " + patient.prescriptions);
         setPrescriptions(patient.prescriptions);
         setOpen(false);
     }
 
     const removePrescription = (prescription)=>{
-        service.removePrescription(patient,prescription);
+        service.removePrescription(patient,prescription).then(r => console.log("success")).catch(err=>console.log("error : "+err));
         setPrescriptions(patient.prescriptions);
     }
 
@@ -88,7 +89,7 @@ function PatientInfo(props) {
                         </span>
                             <span className="py-2">
                         <h3 className="font-bold inline" >Patient ID: </h3>
-                        <h4 className=" text-gray-500 dark:text-gray-400 inline">{patient.id}</h4>
+                        <h4 className=" text-gray-500 dark:text-gray-400 inline">{patient._id}</h4>
                         </span>
                         </div>
                     </div>
@@ -165,7 +166,7 @@ function PatientInfo(props) {
                                         {prescriptions.map((prescription)=> {
                                             return  <tr key={prescription.medicine} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                                 <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    {prescription.medicine}
+                                                    {prescription.medicine.name}
                                                 </th>
                                                 <td className="py-4 px-6">
                                                     {prescription.duration}

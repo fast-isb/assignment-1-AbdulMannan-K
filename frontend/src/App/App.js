@@ -37,7 +37,7 @@ const router = createBrowserRouter([
             {
                 path:"/patients",
                 element:
-                    <CheckPatient patients={await service.updatePatients()} />
+                    <CheckPatient patients={service.patients} />
                     // <CheckPatient patients={service.getAllPatients()}/>
             }
         ]

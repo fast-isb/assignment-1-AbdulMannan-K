@@ -3,11 +3,13 @@ import SideBar from "../Components/SideBar";
 import PatientInfo from "../Components/PatientInfo";
 import {updatePatients} from "../Services/Patient";
 const CheckPatient = props => {
-    const {patients} = props;
-    const [patient,setPatient] = useState(patients[0]);
+    const [patients,setPatients]=useState(props.patients);
+    const [patient,setPatient] = useState();
     useEffect(()=>{
-        let p = updatePatients().then(r => r);
-        console.log('problem'+p);
+        const update=async () => {
+            setPatients(await updatePatients());
+        }
+        update();
     },[])
     const onClick = (e)=>{
         let name = e.target.name;
@@ -15,11 +17,19 @@ const CheckPatient = props => {
         setPatient(patient);
     }
 
-    return (
-        <div className="flex">
-            <SideBar list={patients} onClick={onClick}/>
-            <PatientInfo patient={patient}/>
-        </div>
-    );
+    if(patient!=null)
+        return (
+            <div className="flex">
+                <SideBar list={patients} onClick={onClick}/>
+                <PatientInfo patient={patient}/>
+            </div>
+        );
+    else
+        return (
+            <div className="flex">
+                <SideBar list={patients} onClick={onClick}/>
+            </div>
+        )
+
 };
 export default CheckPatient;
