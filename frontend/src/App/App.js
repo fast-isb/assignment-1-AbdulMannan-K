@@ -11,6 +11,7 @@ import {
     Route, Outlet,
 } from "react-router-dom";
 import * as service from "../Services/Patient"
+import NewPatient from '../Pages/newPatient';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -45,7 +46,8 @@ const router = createBrowserRouter([
 ]);
 function App() {
   return (
-    <RouterProvider router={router}/>
+    // <RouterProvider router={router}/>
+    <NewPatient />
   );
 }
 

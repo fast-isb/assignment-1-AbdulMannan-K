@@ -33,6 +33,7 @@ export async function addPrescription(patient, prescription) {
 
 export async function getMedicine(prescription){
     let medicine;
+    console.log(prescription.medicine);
     medicine=await (await axios.get('http://localhost:3001/patients/medicines/' + prescription.medicine)).data
     prescription.medicine=medicine;
     console.log('medicine : '+medicine)

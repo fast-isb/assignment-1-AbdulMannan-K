@@ -69,6 +69,10 @@ const patientSchema = new schema(
             type:Number,
             required:true,
         },
+        image:{
+            type:String,
+            required:true
+        }
     }
 );
 
