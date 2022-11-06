@@ -105,7 +105,7 @@ const storage = multer.diskStorage(
             cb(null,path.join(__dirname,'/uploads/'))
         },
         filename:function(req,file,cb){
-            cb(null,file.originalname);
+            cb(null,Date.now().toString());
         }
     }
 )
@@ -132,7 +132,7 @@ router.post('/add/newPatient',upload.single('image'),async(req,res)=>{
             prescriptions:[],
             height:50,
             weight:70,
-            image:req.file.path,
+            image:req.file.filename,
         }
     );
     await newPatient.save().then(()=>console.log('new patient added')).catch(err=>console.log(err));

@@ -48,7 +48,8 @@ function PatientInfo(props) {
                         className="w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                         <div className="flex flex-col items-center pb-10 py-6">
                             <img className="w-40 h-40 rounded-full shadow-lg"
-                                 src={image} alt="personal image"/>
+                                src={'http://localhost:3001/'+patient.image}
+                                alt="personal image"/>
                             <h3 className="mb-1 text-xl font-medium font-bold text-gray-900 dark:text-white inline">{patient.name}</h3>
                             <h4 className="text-sm text-gray-500 dark:text-gray-400 inline">Age : {patient.age}</h4>
                         </div>

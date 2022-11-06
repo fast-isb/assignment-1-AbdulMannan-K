@@ -46,8 +46,8 @@ const router = createBrowserRouter([
 ]);
 function App() {
   return (
-    // <RouterProvider router={router}/>
-    <NewPatient />
+    <RouterProvider router={router}/>
+    // <NewPatient />
   );
 }
 
