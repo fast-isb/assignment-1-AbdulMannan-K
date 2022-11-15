@@ -20,7 +20,7 @@ export default function Popup(props) {
     // const classes = useStyles();
 
     return (
-        <Dialog open={openPopup} maxWidth="sm" >
+        <Dialog open={openPopup} maxWidth="sm" data-testid="popup">
             <DialogTitle >
                 <div style={{ display: 'flex' }}>
                     <Typography variant="h6" component="div" style={{ flexGrow: 1 }}>

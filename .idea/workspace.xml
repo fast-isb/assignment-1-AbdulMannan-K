@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc8b8e7f-37b0-498e-94cb-1b58572a048f" name="Changes" comment="" />
+    <list default="true" id="cc8b8e7f-37b0-498e-94cb-1b58572a048f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/AppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/AppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/PatientInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/PatientInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/useForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/useForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/useTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/useTable.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,21 +33,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/abdul/Documents/WebstormProjects/assignment-1-AbdulMannan-K/frontend/src/Pages&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/abdul/Documents/WebstormProjects/assignment-1-AbdulMannan-K/frontend/src/Pages",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "C:/Users/abdul/WebstormProjects/assignment-1-AbdulMannan-K/frontend/node_modules/react-scripts",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/Pages" />
@@ -51,6 +64,82 @@
         <option value="ReactNative" />
       </set>
     </option>
+  </component>
+  <component name="RunManager" selected="Jest.Table Check">
+    <configuration name="Form Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
+      <test-names>
+        <test-name value="Form Check" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Patient Info Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
+      <test-names>
+        <test-name value="Patient Info Check" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Popup Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
+      <test-names>
+        <test-name value="Popup Check" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Sidebar Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
+      <test-names>
+        <test-name value="Sidebar Check" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Table Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/frontend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
+      <test-names>
+        <test-name value="Table Check" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Table Check" />
+        <item itemvalue="Jest.Form Check" />
+        <item itemvalue="Jest.Sidebar Check" />
+        <item itemvalue="Jest.Popup Check" />
+        <item itemvalue="Jest.Patient Info Check" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,6 +159,7 @@
       <workItem from="1667298778721" duration="314000" />
       <workItem from="1667299108729" duration="4781000" />
       <workItem from="1667673832554" duration="603000" />
+      <workItem from="1668533047096" duration="3608000" />
     </task>
     <servers />
   </component>

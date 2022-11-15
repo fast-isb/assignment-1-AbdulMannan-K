@@ -61,7 +61,7 @@ export default function AppBarWithDrawer() {
 
     return (
         <>
-            <AppBar position="fixed" open={open}>
+            <AppBar position="fixed" open={open} data-testid="appBar">
                 <Toolbar>
                     <IconButton
                         color="inherit"

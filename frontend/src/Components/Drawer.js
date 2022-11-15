@@ -68,7 +68,7 @@ export default function MiniDrawer(props){
     const {open,setOpen,handleDrawerOpen,handleDrawerClose,list} = props;
 
     return(
-        <Drawer variant="permanent" open={open}>
+        <Drawer variant="permanent" open={open} data-testid="drawer">
             <DrawerHeader>
                 <IconButton onClick={handleDrawerClose}>
                     {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -76,7 +76,7 @@ export default function MiniDrawer(props){
             </DrawerHeader>
             <Divider />
             <List>
-                {list.map((item, index) => (
+                {Array.isArray(list)?list.map((item, index) => (
                     <ListItem key={item.text} disablePadding sx={{ display: 'block' }}>
                         <ListItemButton
                             component={RouterLink}
@@ -99,7 +99,7 @@ export default function MiniDrawer(props){
                             <ListItemText primary={item.text} sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
-                ))}
+                )):[]}
             </List>
             <Divider />
         </Drawer>

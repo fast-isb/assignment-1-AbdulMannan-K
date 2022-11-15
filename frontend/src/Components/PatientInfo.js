@@ -41,7 +41,7 @@ function PatientInfo(props) {
     },[patient])
 
     return (
-        <div className="container grid grid-cols-3 ">
+        <div className="container grid grid-cols-3 " data-testid="patientInfo">
             <div className="container "  >
                 <div className="container mx-auto px-4 py-2">
                     <div

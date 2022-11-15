@@ -30,7 +30,7 @@ export function Form(props) {
 
     const { children, ...other } = props;
     return (
-        <form autoComplete="off" {...other}>
+        <form autoComplete="off" {...other} data-testid="form">
             {props.children}
         </form>
     )
