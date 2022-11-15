@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc8b8e7f-37b0-498e-94cb-1b58572a048f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/node.js.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/node.js.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/AppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/AppBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/PatientInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/PatientInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/useForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/useForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/useTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/useTable.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +150,7 @@
       <workItem from="1667298778721" duration="314000" />
       <workItem from="1667299108729" duration="4781000" />
       <workItem from="1667673832554" duration="603000" />
-      <workItem from="1668533047096" duration="3608000" />
+      <workItem from="1668533047096" duration="4035000" />
     </task>
     <servers />
   </component>
