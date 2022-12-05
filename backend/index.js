@@ -1,6 +1,5 @@
 import express from 'express'; // <-- Module Style import
 import bodyParser from 'body-parser';
-// import router from './routes/users.js';
 import router from './routes/patients.js'
 import cors from 'cors'
 import path from 'path'
