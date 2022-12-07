@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cc8b8e7f-37b0-498e-94cb-1b58572a048f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Services/Patient.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Services/Patient.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,79 +57,68 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.Table Check">
-    <configuration name="Form Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/frontend" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
-      <test-names>
-        <test-name value="Form Check" />
-      </test-names>
+  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment (2)">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
       <method v="2" />
     </configuration>
-    <configuration name="Patient Info Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/frontend" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
-      <test-names>
-        <test-name value="Patient Info Check" />
-      </test-names>
+    <configuration name="docker-compose.yaml: Compose Deployment (1)" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="Popup Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/frontend" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
-      <test-names>
-        <test-name value="Popup Check" />
-      </test-names>
+    <configuration name="docker-compose.yaml: Compose Deployment (2)" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="Sidebar Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/frontend" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
-      <test-names>
-        <test-name value="Sidebar Check" />
-      </test-names>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="Table Check" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/frontend" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/frontend/src/App/App.test.js" />
-      <test-names>
-        <test-name value="Table Check" />
-      </test-names>
+    <configuration name="docker-compose.yaml.backend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="backend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="frontend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Table Check" />
-        <item itemvalue="Jest.Form Check" />
-        <item itemvalue="Jest.Sidebar Check" />
-        <item itemvalue="Jest.Popup Check" />
-        <item itemvalue="Jest.Patient Info Check" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment (2)" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment (1)" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.frontend: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.backend: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +149,8 @@
       <workItem from="1670150333147" duration="190000" />
       <workItem from="1670150806917" duration="9000" />
       <workItem from="1670150966767" duration="6741000" />
-      <workItem from="1670158350167" duration="6271000" />
+      <workItem from="1670158350167" duration="11614000" />
+      <workItem from="1670275367632" duration="17363000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,9 @@ import axios from "axios";
 
 export let patients = []
 
+let ip ='35.78.211.73';
+// let ip = 'localhost';
+
 export const medicineOptions=[
     {
         id:1,
@@ -20,7 +23,7 @@ export const medicineOptions=[
 export async function addPrescription(patient, prescription) {
     prescription.medicine = medicineOptions[prescription.medicineId - 1].title;
     // patient.prescriptions.push(prescription);
-    await axios.post('http://localhost:3001/patients/'+patient._id+'/add',{
+    await axios.post('http://+'+ip+':3001/patients/'+patient._id+'/add',{
         prescription
     }).then(async (res) => {
         let newPrescription = await res.data;
@@ -34,14 +37,14 @@ export async function addPrescription(patient, prescription) {
 export async function getMedicine(prescription){
     let medicine;
     console.log(prescription.medicine);
-    medicine=await (await axios.get('http://localhost:3001/patients/medicines/' + prescription.medicine)).data
+    medicine=await (await axios.get('http://'+ip+':3001/patients/medicines/' + prescription.medicine)).data
     prescription.medicine=medicine;
     console.log('medicine : '+medicine)
 }
 export async function getPrescriptions(patient){
     for(let i=0 ;i < patient.prescriptions.length ; i++){
         let pres;
-        pres=await (await axios.get('http://localhost:3001/patients/' + patient.prescriptions[i]._id)).data
+        pres=await (await axios.get('http://'+ip+':3001/patients/' + patient.prescriptions[i]._id)).data
         console.log('pres'+pres);
         await getMedicine(pres);
         patient.prescriptions[i]=(pres);
@@ -51,7 +54,7 @@ export async function getPrescriptions(patient){
 
 export async function removePrescription(patient, prescription) {
     patient.prescriptions = patient.prescriptions.filter(e => e !== prescription)
-    await axios.post('http://localhost:3001/patients/' + patient._id + '/remove', {
+    await axios.post('http://'+ip+':3001/patients/' + patient._id + '/remove', {
         prescription
     })
 }
@@ -62,7 +65,7 @@ export async function removePrescription(patient, prescription) {
 //     return patients;
 // }
 export async function updatePatients(){
-    let patient = await (await axios.get('http://localhost:3001/patients')).data;
+    let patient = await (await axios.get('http://'+ip+':3001/patients')).data;
     // patients.push(patient[0]);
     patients=patient;
     console.log('frontend : '+patient.map((p)=>p.name));
